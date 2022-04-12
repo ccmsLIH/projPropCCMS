@@ -45,13 +45,13 @@ structure for data analysis projects.
 # install.packages(devtools)
 library(devtools)
 
-install_github("ccmsLIH/prodigenrCCMS2")
+install_github("ccmsLIH/prodigenrCCMS")
 ```
 
 ## Usage prodigenrCCMS
 
 ``` r
-library(prodigenrCCMS2)
+library(prodigenrCCMS)
 prodigenrCCMS2::setup_project("L:/Projects folder/YourProjectName")
 ```
 
