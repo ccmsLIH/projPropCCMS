@@ -1,6 +1,8 @@
 # Creation of documents and setting up git --------------------------------
 # To be run within newly created R Project!
 
+# Set language to english
+Sys.setenv(LANG = "en")
 
 # loading and installing of packages --------------------------------------
 library(devtools)

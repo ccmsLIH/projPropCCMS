@@ -23,7 +23,7 @@ create_doc <- function(type = c("report", "slides")) {
 
     type <- match.arg(type)
     file_name <- normalizePath(file.path("03-Outputs/Results/", paste0(type, ".Rmd")), mustWork = FALSE)
-    template_file <- fs::path_package("prodigenrCCMS2", "rmarkdown", "templates", type)
+    template_file <- fs::path_package("prodigenrCCMS", "rmarkdown", "templates", type)
     if (file.exists(file_name)) {
         rlang::abort(paste0("The file '", type, ".Rmd' already exists in the Results folder."))
     } else {
@@ -62,7 +62,7 @@ create_SAP <- function() {
         rlang::abort("What happened to your `01-Inputs/Methodology/SAP/` folder?")
 
     file_name <- normalizePath(file.path("01-Inputs/Methodology/SAP/SAP"), mustWork = FALSE)
-    template_file <- fs::path_package("prodigenrCCMS2", "rmarkdown", "templates", "SAP")
+    template_file <- fs::path_package("prodigenrCCMS", "rmarkdown", "templates", "SAP")
     if (file.exists(file_name)) {
         rlang::abort(paste0("The file 'SAP.Rmd' already exists in the Results folder."))
     } else {
@@ -85,7 +85,7 @@ create_slides <- function() {
     create_doc(type = "slides")
 }
 
-#' List project templates within \pkg{prodigenrCCMS2}.
+#' List project templates within \pkg{prodigenrCCMS}.
 #'
 #' Get a list of available templates in a package.
 #'
