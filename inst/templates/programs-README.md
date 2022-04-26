@@ -1,4 +1,4 @@
-# Description of R/ folder and .R files
+# Description of Programs folder and .R files
 
 This folder contains custom functions/macros or R/SAS scripts used for this project's
 analyses, such as in the `Results/` folder. 

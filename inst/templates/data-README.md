@@ -1,4 +1,4 @@
-# Contents of data folder
+# Contents of Data folder
 
 Should contain the data used specifically for the scientific project
 and product (e.g. the manuscript). 
