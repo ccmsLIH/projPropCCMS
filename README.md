@@ -39,6 +39,9 @@ aims to make it easier to adhere to open scientific practices by
 following a standard, consistent, and established folder and file
 structure for data analysis projects.
 
+The original package prodigenr() was adapted by Anna Schritz to fit the
+needs of CCMS, LIH. The package was therefore renamed prodigenrCCMS().
+
 ## Installation and usage of CCMS modified package prodigenrCCMS
 
 Copy and paste the following two code blocks in R. Specify the project
@@ -50,12 +53,10 @@ code.
 ``` r
 # installation of devtools package needed one time only when first using/running devtools:
 
-install.packages(devtools)
+install.packages("devtools")
 library(devtools)
 
-# installation of prodigenrCCMS package is also only needed once, 
-# except if updates are published on github
-
+# installation of prodigenrCCMS package is also only needed once, except if updates are published on github
 
 install_github("ccmsLIH/prodigenrCCMS")
 ```
@@ -63,8 +64,7 @@ install_github("ccmsLIH/prodigenrCCMS")
 ### Usage prodigenrCCMS
 
 ``` r
-
-library(prodigenrCCMS)
+library(prodigenrCCMS2)
 
 # Specify project name
 YourProject <- "ProjectName"
@@ -80,7 +80,6 @@ prodigenrCCMS::setup_project(paste0(Path, YourProject))
 # After setup, open the R project in the Project Folder.
 # To create a SAP or statistical report template or to connect to Git, run the R file
 # DocumentCreation_Git.R in ProjectName\02-Process\Programs
-
 ```
 
 ## Installation and usage of original package prodigenr

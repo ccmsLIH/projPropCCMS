@@ -78,6 +78,10 @@ Path <- "PathToProjectFolder"
 # Setup Project
 prodigenrCCMS::setup_project(paste0(Path, YourProject))
 
+# After setup, open the R project in the Project Folder.
+# To create a SAP or statistical report template or to connect to Git, run the R file
+# DocumentCreation_Git.R in ProjectName\02-Process\Programs
+
 ```
 
 ## Installation and usage of original package prodigenr
