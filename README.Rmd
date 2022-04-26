@@ -51,7 +51,7 @@ Copy and paste the following two code blocks in R. Specify the project name and 
 ```r
 # installation of devtools package needed one time only when first using/running devtools:
 
-install.packages(devtools)
+install.packages("devtools")
 library(devtools)
 
 # installation of prodigenrCCMS package is also only needed once, except if updates are published on github
