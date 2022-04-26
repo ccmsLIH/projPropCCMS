@@ -5,17 +5,17 @@
 # loading and installing of packages --------------------------------------
 library(devtools)
 
-install_github("ccmsLIH/prodigenrCCMS2")
-library(prodigenrCCMS2)
+install_github("ccmsLIH/prodigenrCCMS")
+library(prodigenrCCMS)
 
 
 # Creation of documents ---------------------------------------------------
 # Creation of a rmarkdown and word template for a statistical report in the "03-Outputs/Results/" folder
-prodigenrCCMS2::create_report()
+prodigenrCCMS::create_report()
 
 
 # Creation of a rmarkdown and word template for a SAP in the "01-Inputs/Methodology/SAP/" folder
-prodigenrCCMS2::create_SAP()
+prodigenrCCMS::create_SAP()
 
 
 
