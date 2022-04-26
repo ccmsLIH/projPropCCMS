@@ -43,12 +43,32 @@ setup_project <-
 
 create_directories <- function() {
     fs::dir_create(c("00-Administration", "01-Inputs", "02-Process", "03-Outputs"))
+
     fs::dir_create(c("00-Administration/Report", "00-Administration/Meetings",
                      "00-Administration/Contract", "00-Administration/Quality"))
-    fs::dir_create(c("01-Inputs/Bibliography", "01-Inputs/Methodology", "01-Inputs/Datamanagement"))
+
+    fs::dir_create(c("01-Inputs/Bibliography", "01-Inputs/Methodology"))
+
     fs::dir_create(c("01-Inputs/Methodology/SAP", "01-Inputs/Methodology/SampleSize"))
-    fs::dir_create(c("01-Inputs/Datamanagement/Codebook", "01-Inputs/Datamanagement/AnnotedQuestionnaire"))
-    fs::dir_create(c("02-Process/Data-raw", "02-Process/Data","02-Process/Programs", "02-Process/ExtractionGrid"))
+
+    fs::dir_create(c("02-Process/Data-raw", "02-Process/Data","02-Process/Programs",
+                     "02-Process/ExtractionGrid", "02-Process/Datamanagement"))
+
+    fs::dir_create(c("02-Process/Datamanagement/01-DVPandTimelines",
+                     "02-Process/Datamanagement/02-CRFDesign",
+                     "02-Process/Datamanagement/03-DatabaseCreation",
+                     "02-Process/Datamanagement/04-SitesAndStaffManagement",
+                     "02-Process/Datamanagement/05-QueriesManagement",
+                     "02-Process/Datamanagement/06-ChangeManagement",
+                     "02-Process/Datamanagement/07-DataTransfers",
+                     "02-Process/Datamanagement/08-DataCoding",
+                     "02-Process/Datamanagement/09-Archives",
+                     "02-Process/Datamanagement/10-MeetingMinutes",))
+
+    fs::dir_create(c("02-Process/Datamanagement/07-DataTransfers/ImportedFiles",
+                     "02-Process/Datamanagement/07-DataTransfers/ExportedFiles",
+                     "02-Process/Datamanagement/07-DataTransfers/TransformationPrograms"))
+
     fs::dir_create(c("03-Outputs/Results", "03-Outputs/Posters", "03-Outputs/Articles"))
 }
 
