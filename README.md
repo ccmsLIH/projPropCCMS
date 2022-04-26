@@ -53,22 +53,17 @@ code.
 install.packages(devtools)
 library(devtools)
 
-<<<<<<< HEAD
-=======
 # installation of prodigenrCCMS package is also only needed once, except if updates are published on github
 
->>>>>>> Adaptions
+
 install_github("ccmsLIH/prodigenrCCMS")
 ```
 
 ### Usage prodigenrCCMS
 
 ``` r
-<<<<<<< HEAD
+
 library(prodigenrCCMS)
-prodigenrCCMS2::setup_project("L:/Projects folder/YourProjectName")
-=======
-library(prodigenrCCMS2)
 
 # Specify project name
 YourProject <- "ProjectName"
@@ -80,7 +75,7 @@ Path <- "PathToProjectFolder"
 
 # Setup Project
 prodigenrCCMS::setup_project(paste0(Path, YourProject))
->>>>>>> Adaptions
+
 ```
 
 ## Installation and usage of original package prodigenr
