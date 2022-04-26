@@ -56,7 +56,7 @@ Copy and paste the following two code blocks in R. Specify the project name and 
 install.packages("devtools")
 library(devtools)
 
-# installation of prodigenrCCMS package is also only needed once, except if updates are published on github
+# installation of prodigenrCCMS package is also only needed once, except if updates are published on github ccmsLIH
 
 install_github("ccmsLIH/prodigenrCCMS")
 

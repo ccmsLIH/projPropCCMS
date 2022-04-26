@@ -56,7 +56,7 @@ code.
 install.packages("devtools")
 library(devtools)
 
-# installation of prodigenrCCMS package is also only needed once, except if updates are published on github
+# installation of prodigenrCCMS package is also only needed once, except if updates are published on github ccmsLIH
 
 install_github("ccmsLIH/prodigenrCCMS")
 ```
