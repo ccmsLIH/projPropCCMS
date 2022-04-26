@@ -53,7 +53,8 @@ code.
 install.packages(devtools)
 library(devtools)
 
-# installation of prodigenrCCMS package is also only needed once, except if updates are published on github
+# installation of prodigenrCCMS package is also only needed once, 
+# except if updates are published on github
 
 
 install_github("ccmsLIH/prodigenrCCMS")
@@ -75,6 +76,10 @@ Path <- "PathToProjectFolder"
 
 # Setup Project
 prodigenrCCMS::setup_project(paste0(Path, YourProject))
+
+# After setup, open the R project in the Project Folder.
+# To create a SAP or statistical report template or to connect to Git, run the R file
+# DocumentCreation_Git.R in ProjectName\02-Process\Programs
 
 ```
 
