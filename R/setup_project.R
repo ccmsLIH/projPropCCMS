@@ -63,7 +63,7 @@ create_directories <- function() {
                      "02-Process/Datamanagement/07-DataTransfers",
                      "02-Process/Datamanagement/08-DataCoding",
                      "02-Process/Datamanagement/09-Archives",
-                     "02-Process/Datamanagement/10-MeetingMinutes",))
+                     "02-Process/Datamanagement/10-MeetingMinutes"))
 
     fs::dir_create(c("02-Process/Datamanagement/07-DataTransfers/ImportedFiles",
                      "02-Process/Datamanagement/07-DataTransfers/ExportedFiles",
