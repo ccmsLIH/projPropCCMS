@@ -8,7 +8,7 @@ This project...
 
 # Brief description of folder and file contents
 
-TODO: As project evolves, add brief description of what is inside the 02-Process/Data, 02-Process/Program and 03-Outputs/Results folders.
+TODO: As project evolves, add brief description of what is inside the folders.
 
 The following folders contain:
 
