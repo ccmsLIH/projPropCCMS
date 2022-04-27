@@ -66,6 +66,15 @@ add_Rfile <- function(proj_name){
     )
 }
 
+
+# Adding an datamangement templates on default
+include_templates <- function(proj_name){
+    new <- use_template(
+        "DVPandTimelines-F DM-901-03_Clinical Data Management Processes and Study Timelines",
+        "02-Process/Datamanagement/01-DVPandTimelines/DVPandTimelines-F DM-901-03_Clinical Data Management Processes and Study Timelines.docx"
+    )
+}
+
 # Taken from usethis:::uses_git
 has_git <- function(project_path = ".") {
     repo <- tryCatch(gert::git_find(project_path), error = function(e) NULL)
