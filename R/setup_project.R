@@ -95,7 +95,7 @@ include_readmes <- function(proj_name) {
 include_word <- function(){
     template_file <- fs::path_package("prodigenrCCMS", "datamanagement")
     file_name <- normalizePath(file.path("02-Process/Datamanagement"), mustWork = FALSE)
-    dir_copy(template_file, file_name, overwrite = TRUE)
+    fs::dir_copy(template_file, file_name, overwrite = TRUE)
 }
 
 
