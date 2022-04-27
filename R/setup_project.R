@@ -37,8 +37,8 @@ setup_project <-
                 create_directories()
                 include_readmes(proj_name)
                 add_Rfile(proj_name)
-                include_templates(proj_name)
                 use_template("TODO.md")
+                include_word()
             })
     }
 
@@ -91,6 +91,13 @@ include_readmes <- function(proj_name) {
     use_template("data-raw-README.md", "02-Process/Data-raw/README.md")
     use_template("programs-README.md", "02-Process/Programs/README.md")
 }
+
+include_word <- function(){
+    template_file <- fs::path_package("prodigenrCCMS", "datamanagement")
+    file_name <- normalizePath(file.path("02-Process/Datamanagement"), mustWork = FALSE)
+    dir_copy(template_file, file_name, overwrite = TRUE)
+}
+
 
 
 

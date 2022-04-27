@@ -61,19 +61,12 @@ add_rproj_file <- function(proj_name) {
 # Adding an R file by default with code to create documents and connect to git
 add_Rfile <- function(proj_name){
     new <- use_template(
-        "Programs-DocumentCreation_Git",
+        "DocumentCreation_Git",
         "02-Process/Programs/DocumentCreation_Git.R"
     )
 }
 
 
-# Adding an datamangement templates on default
-include_templates <- function(proj_name){
-    new <- use_template(
-        "DVPandTimelines-F DM-901-03_Clinical Data Management Processes and Study Timelines",
-        "02-Process/Datamanagement/01-DVPandTimelines/DVPandTimelines-F DM-901-03_Clinical Data Management Processes and Study Timelines.docx"
-    )
-}
 
 # Taken from usethis:::uses_git
 has_git <- function(project_path = ".") {
