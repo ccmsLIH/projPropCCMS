@@ -36,7 +36,7 @@ library(knitr)
  
  
 
-**Trial registration number**:
+**Trial re.g.istration number**:
 
 **SAP version**: 001-`r format(Sys.time(), '%d/%m/%Y')`
 
@@ -59,11 +59,11 @@ kable(revtab)
 
 **Signatures**:
 
-*Person writing the SAP*
+*Person writing the SAP*:                       __________________________________
 
-*Senior statistician responsible*
+*Senior statistician responsible*:              __________________________________      
 
-*Chief investigator/ clinical lead*
+*Chief investigator/ clinical lead*:            __________________________________                
 
 
 
@@ -104,13 +104,14 @@ kable(revtab)
 # Study Methods
 
 ## Trial design
-*Brief description of trial design including type of trial (eg, parallel group, multiarm, crossover, factorial) and allocation ratio and may include brief description of interventions*
+*Brief description of trial design including type of trial (e.g., parallel group, multi-arm, crossover, factorial) and allocation ratio and may include brief description of interventions.*
 
 ## Randomization
-*Randomization details, eg, whether any minimization or stratification occurred (including stratifying factors used or the location of that information if it is not held within the SAP)*
+*Randomization details, e.g., whether any minimization or stratification occurred (including stratifying factors used or the location of that information if it is not held within the SAP).*
 
 ## Sample Size
-*Full sample size calculation or reference to sample size calculation in protocol (instead of replication in SAP).*
+*Full sample size calculation or reference to sample size calculation in protocol (instead of replication in SAP).*  
+  
 *Sufficient detail must be provided to enable another statistician to reproduce the calculation.*
 
 **Number of study participants**: 
@@ -119,16 +120,19 @@ kable(revtab)
 
 
 ## Framework
-*Superiority, equivalence, or non-inferiority hypothesis testing framework, including which comparisons will be presented on this basis*
-*The SAP should clearly specify the framework for each outcome or provide a global statement  .*
+*Superiority, equivalence, or non-inferiority hypothesis testing framework, including which comparisons will be presented on this basis.*  
+  
+*The SAP should clearly specify the framework for each outcome or provide a global statement.*
 
 ## Statistical interim analyses and stopping guidance
-- *Information on interim analyses specifying what interim analyses will be carried out, who will perform the analyses and listing of time points. If interim analyses are not planned then this should be stated for clarity.*
-- *Any planned adjustment of the significance level due to interim analysis*
+- *Information on interim analyses specifying what interim analyses will be carried out, who will perform the analyses and listing of time points. If interim analyses are not planned then this should be stated for clarity*  
+  
+- *Any planned adjustment of the significance level due to interim analysis*  
+  
 - *Details of guidelines for stopping the trial early*
 
 ## Timing of final analysis
-*Timing of final analysis, eg, all outcomes analyzed collectively or timing stratified by planned length of follow-up*
+*Timing of final analysis, e.g., all outcomes analyzed collectively or timing stratified by planned length of follow-up.*
 
 ## Timing of outcome assessments
 *Time points at which the outcomes are measured including visit “windows”*
@@ -137,7 +141,7 @@ kable(revtab)
 # Statistical Principles
 
 ## Confidence intervals and P values
-- *Level of statistical significance, including wheater tests will be one- or two-sided*
+- *Level of statistical significance, including whether tests will be one- or two-sided*
 - *Description and rationale for any adjustment for multiplicity and, if so, detailing how the type 1 error is to be controlled. If no adjustment for multiplicity is planned then this should be stated for clarity.*
 - *Confidence intervals with their confidence levels to be reported*
 
@@ -148,23 +152,25 @@ kable(revtab)
 - *Description of which protocol deviations will be summarized (e.g. number and type of protocol deviations, by group)*
 
 ## Analysis population
-*Definition of analysis populations, eg, intention to treat, per protocol, complete case, safety*
+*Definition of analysis populations, e.g., intention to treat, per protocol, complete case, safety.*  
+  
 *This includes which outcomes will be analysed according to which analysis population.*
   
 # Trial population
 
 ## Screening data
-*Reporting of screening data (if collected) to describe representativeness of trial sample*
+*Reporting of screening data (if collected) to describe representativeness of trial sample.*
 
 ## Eligibility
-*Summary of eligibility criteria*
+*Summary of eligibility criteria.*
 
 ## Recruitment
-*Information to be included in the CONSORT flow diagram*
-*According to the CONSORT guidelines, a flow diagram must be completed in order to be compliant with the CONSORT 2010 standards .*
+*Information to be included in the CONSORT flow diagram.*   
+  
+*According to the CONSORT guidelines, a flow diagram must be completed in order to be compliant with the CONSORT 2010 standards.*
 
 ## Withdrawal/follow-up
-- *Level of withdrawal, eg, from intervention and/or from follow-up*
+- *Level of withdrawal, e.g., from intervention and/or from follow-up*
 - *Timing of withdrawal/lost to follow-up data*
 - *Reasons and details of how withdrawal/lost to follow-up data will be presented*
 
@@ -178,38 +184,43 @@ kable(revtab)
 ## Outcome definitions
 *List and describe each primary and secondary outcome including details of:*
 
-- *specification of outcomes and timings. If applicable include the order of importance of primary or key secondary end points (eg, order in which they will be tested)*
-- *specific measurement and units (eg, glucose control, hbA1c [mmol/mol or %])*
-- *any calculation or transformation used to derive the outcome (eg, change from baseline, QoL score, time to event, logarithm, etc)*
+- *specification of outcomes and timings. If applicable include the order of importance of primary or key secondary end points (e.g., order in which they will be tested)*
+- *specific measurement and units (e.g., glucose control, hbA1c [mmol/mol or %])*
+- *any calculation or transformation used to derive the outcome (e.g., change from baseline, QoL score, time to event, logarithm, etc)*
 
 ## Analysis methods
-*List and describe each primary and secondary outcome inclduing details of:*
-- *what analysis method will be used and how the treatment effects will be presented*
-- *any adjustment for covariates (covariates to be used and how these will be included in the model)*
-- *methods used for assumptions to be checked for statistical methods*
-- *details of alternative methods to be used if distributional assumptions do not hold, eg, normality, proportional hazards, etc*
-- *any planned sensitivity analyses for each outcome where applicable*
-- *any planned subgroup analyses for each outcome including how subgroups are defined, the statistical method that will be used and how the results will be presented (eg, forest plot)*
+*List and describe each primary and secondary outcome including details of:*
+- *what analysis method will be used and how the treatment effects will be presented*  
+ 
+- *Any adjustment for covariates (covariates to be used and how these will be included in the model)*  
+  
+- *Methods used for assumptions to be checked for statistical methods*  
+  
+- *details of alternative methods to be used if distributional assumptions do not hold, e.g., normality, proportional hazards, etc*  
+  
+- *any planned sensitivity analyses for each outcome where applicable*  
+  
+- *Any planned subgroup analyses for each outcome including how subgroups are defined, the statistical method that will be used and how the results will be presented (e.g., forest plot)*
 
 *If  more than one method is to be used to analyse the primary outcome, e.g. adjusted and unadjusted for covariates, then the primary analysis method should be identified.*
 
 ## Missing data
-*Reporting and assumptions/statistical methods to handle missing data (eg, multiple imputation)*
+*Reporting and assumptions/statistical methods to handle missing data (e.g., multiple imputation)*
 
 ## Additional analyses
-*Details of any additional statistical analyses required, eg, complier-average causal effect analysis*
+*Details of any additional statistical analyses required, e.g., complier-average causal effect analysis*
 
 ## Harms
-*Sufficient detail on summarizing safety data, eg, information on severity, expectedness, and causality; details of how adverse events are coded or categorized; how adverse event data will be analyzed, ie, grade 3/4 only, incidence case analysis, intervention emergent analysis*
+*Sufficient detail on summarizing safety data, e.g., information on severity, expectedness, and causality; details of how adverse events are coded or cate.g.orized; how adverse event data will be analyzed, i.e., grade 3/4 only, incidence case analysis, intervention emergent analysis.*
 
-## Analysis dissemination strategy
+## Analysis dissemination strate.g.y
 *Outline the intended steps to be taken to disseminate the results of the study (i.e. will the results be published, presented at a conference etc.).*
 
 ## Interpretation
 *Detail how you will interpret the results in the context of your stated hypothesis. I.e. if the results do/do not meet your hypothesis, what will you conclude?* 
 
 ## Statistical Software
-*Details of statistical packages to be used to carry out analyses*
+*Details of statistical packages to be used to carry out analyses.*
 
 ## References
 - *References to be provided for nonstandard statistical methods*
