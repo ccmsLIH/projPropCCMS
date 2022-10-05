@@ -18,7 +18,22 @@ Sys.setlocale("LC_TIME", "C")
 
 devtools::install_deps()
 
+# libraries
 library(knitr)
+
+
+# table references
+table_nums <- captioner::captioner(prefix = "Table")
+fig_nums <- captioner::captioner(prefix = "Figure")
+
+t.ref <- function(x) {
+  stringr::str_extract(table_nums(x), "[^:]*")
+}
+
+
+f.ref <- function(x) {
+  stringr::str_extract(fig_nums(x), "[^:]*")
+}
 ```
  \newline
  
@@ -47,8 +62,10 @@ library(knitr)
 revtab <- data.frame("Section number changed" = c(NA, NA, NA), "Description and reason of change" = c(NA, NA, NA), "Date changed" = c(NA, NA, NA))
 colnames(revtab) <- c("Section number changed", "Description and reason of change", "Date changed")
 
-kable(revtab)
+tabRevision <- revtab %>% gt() %>%
+    tab_options(container.width = 260, container.height = 120, table.font.size = 6, column_labels.font.size = 7) 
 
+gtsave(tabRevision, "RevisionTable.png")
 
 ```
 

@@ -19,7 +19,23 @@ Sys.setlocale("LC_TIME", "C")
 
 devtools::install_deps()
 
+# Libraries
 library(knitr)
+
+
+
+# table references
+table_nums <- captioner::captioner(prefix = "Table")
+fig_nums <- captioner::captioner(prefix = "Figure")
+
+t.ref <- function(x) {
+  stringr::str_extract(table_nums(x), "[^:]*")
+}
+
+
+f.ref <- function(x) {
+  stringr::str_extract(fig_nums(x), "[^:]*")
+}
 ```
 
 
@@ -41,20 +57,24 @@ library(knitr)
 
 **Protocol version**: *Reference to version of protocol being used*
 
+**SAP version**: *Reference to version of SAP being used*
+
 **Report revision**: *Report revision history*
 ```{r revision table}
 revtab <- data.frame("Section number changed" = c(NA, NA, NA), "Description and reason of change" = c(NA, NA, NA), "Date changed" = c(NA, NA, NA))
 colnames(revtab) <- c("Section number changed", "Description and reason of change", "Date changed")
 
-kable(revtab)
+tabRevision <- revtab %>% gt() %>%
+    tab_options(container.width = 260, container.height = 120, table.font.size = 6, column_labels.font.size = 7) 
 
+gtsave(tabRevision, "RevisionTable.png")
 
 ```
 
 
 **Report contributors**: 
 
-*Names, affiliations, and roles of SAP contributors*
+*Names, affiliations, and roles of report contributors*
 
 **Signatures**:
 
@@ -68,7 +88,7 @@ kable(revtab)
 \newpage
 
 # Abstract 
-*A brief summary of the report and the conclusions. The aim is to make the reader understand what the report is about.Use ordinary, non-statistical language.*
+*A brief summary of the report and the conclusions. The aim is to make the reader understand what the report is about. Use ordinary, non-statistical language.*
 
 # Introduction
 *What is the problem and what is the structure of the report.*
