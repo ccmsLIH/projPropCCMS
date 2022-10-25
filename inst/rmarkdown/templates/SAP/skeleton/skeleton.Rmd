@@ -1,5 +1,5 @@
 ---
-title: "*TITLE: Descriptive title that matches the protocol, with SAP either as a forerunner or subtitle,and trial acronym (if applicable)*"
+title: "*TITLE: Descriptive title that matches the protocol, with SAP either as a forerunner or subtitle, and trial acronym (if applicable)*"
 subtitle: "Statistical Analysis Plan - SAP"
 author: " "
 date: "`r format(Sys.time(), '%d/%m/%Y')`"
@@ -20,7 +20,8 @@ devtools::install_deps()
 
 # libraries
 library(knitr)
-
+library(tidyverse)
+library(gt)
 
 # table references
 table_nums <- captioner::captioner(prefix = "Table")
@@ -51,7 +52,7 @@ f.ref <- function(x) {
  
  
 
-**Trial re.g.istration number**:
+**Trial registration number**:
 
 **SAP version**: 001-`r format(Sys.time(), '%d/%m/%Y')`
 
@@ -231,7 +232,12 @@ gtsave(tabRevision, "RevisionTable.png")
 *Sufficient detail on summarizing safety data, e.g., information on severity, expectedness, and causality; details of how adverse events are coded or cate.g.orized; how adverse event data will be analyzed, i.e., grade 3/4 only, incidence case analysis, intervention emergent analysis.*
 
 ## Analysis dissemination strate.g.y
-*Outline the intended steps to be taken to disseminate the results of the study (i.e. will the results be published, presented at a conference etc.).*
+*Outline the intended steps to be taken to disseminate the results of the study (i.e. will the results be published, presented at a conference etc.).*   
+   
+   
+CCMS will provide a statistical report with the results of the analysis according to this SAP.
+Results of this analysis can be published in articles or presented at conferences by the investigator. The assigned statistician of CCMS will have to be recognized as statistician of the study by mentioning her/him as a co-author.
+
 
 ## Interpretation
 *Detail how you will interpret the results in the context of your stated hypothesis. I.e. if the results do/do not meet your hypothesis, what will you conclude?* 
