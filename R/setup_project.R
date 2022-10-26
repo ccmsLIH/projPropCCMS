@@ -95,6 +95,8 @@ include_readmes <- function(proj_name) {
     use_template("data-raw-README.md", "02-Process/Data-raw/README.md")
     use_template("programs-README.md", "02-Process/Programs/README.md")
     use_template("quality-README.md", "00-Administration/Quality/README.md")
+    use_template("SAP-README.md", "01-Inputs/Methodology/SAP/README.md")
+    use_template("report-README.md", "03-Outputs/Report/README.md")
 }
 
 include_word <- function(){
