@@ -12,14 +12,19 @@ TODO: As project evolves, add brief description of what is inside the folders.
 
 The following folders contain:
 
+- `00-Administration/Budget`:
 - `00-Administration/Contract`:
 - `00-Administration/Meetings`:
 - `00-Administration/Quality`:
-- `00-Administration/Report`:
+
 - `01-Inputs/Bibliography`:
 - `01-Inputs/Methodology`:
+- `01-Inputs/Methodology/Protocol`:
+- `01-Inputs/Methodology/Randomization`:
 - `01-Inputs/Methodology/SampleSize`:
 - `01-Inputs/Methodology/SAP`:
+
+- `02-Process/Data-derived`:
 - `02-Process/Datamanagement`:
 - `02-Process/Datamanagement/01-DVPandTimelines`:
 - `02-Process/Datamanagement/02-CRFDesign`:
@@ -34,12 +39,11 @@ The following folders contain:
 - `02-Process/Datamanagement/08-DataCoding`:
 - `02-Process/Datamanagement/09-Archives`:
 - `02-Process/Datamanagement/10-MeetingMinutes`:
-- `02-Process/Data`:
 - `02-Process/Data-raw`:
-- `02-Process/ExtractionGrid`:
 - `02-Process/Programs`:
-- `03-Outputs/Articles`:
-- `03-Outputs/Posters`:
+
+- `03-Outputs/Publication`:
+- `03-Outputs/Report`:
 - `03-Outputs/Results`:
 
 # Installing project R package dependencies
