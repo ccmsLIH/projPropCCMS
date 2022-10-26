@@ -45,15 +45,16 @@ setup_project <-
 create_directories <- function() {
     fs::dir_create(c("00-Administration", "01-Inputs", "02-Process", "03-Outputs"))
 
-    fs::dir_create(c("00-Administration/Report", "00-Administration/Meetings",
-                     "00-Administration/Contract", "00-Administration/Quality"))
+    fs::dir_create(c("00-Administration/Budget", "00-Administration/Contract",
+                     "00-Administration/Meetings","00-Administration/Quality"))
 
     fs::dir_create(c("01-Inputs/Bibliography", "01-Inputs/Methodology"))
 
-    fs::dir_create(c("01-Inputs/Methodology/SAP", "01-Inputs/Methodology/SampleSize"))
+    fs::dir_create(c("01-Inputs/Methodology/Protocol", "01-Inputs/Methodology/Randomization",
+                     "01-Inputs/Methodology/SAP", "01-Inputs/Methodology/SampleSize"))
 
-    fs::dir_create(c("02-Process/Data-raw", "02-Process/Data","02-Process/Programs",
-                     "02-Process/ExtractionGrid", "02-Process/Datamanagement"))
+    fs::dir_create(c("02-Process/Data-raw", "02-Process/Data-derived","02-Process/Programs",
+                     "02-Process/Datamanagement"))
 
     fs::dir_create(c("02-Process/Datamanagement/01-DVPandTimelines",
                      "02-Process/Datamanagement/02-CRFDesign",
@@ -63,7 +64,8 @@ create_directories <- function() {
                      "02-Process/Datamanagement/06-ChangeManagement",
                      "02-Process/Datamanagement/08-DataCoding",
                      "02-Process/Datamanagement/09-Archives",
-                     "02-Process/Datamanagement/10-MeetingMinutes"))
+                     "02-Process/Datamanagement/10-MeetingMinutes",
+                     "02-Process/Datamanagement/11-ExternalDataReconciliations"))
 
     fs::dir_create("02-Process/Datamanagement/07-DataTransfers", mode = "ug=rwx,o=r")
 
@@ -71,7 +73,7 @@ create_directories <- function() {
                      "02-Process/Datamanagement/07-DataTransfers/ExportedFiles",
                      "02-Process/Datamanagement/07-DataTransfers/TransformationPrograms"))
 
-    fs::dir_create(c("03-Outputs/Results", "03-Outputs/Posters", "03-Outputs/Articles"))
+    fs::dir_create(c("03-Outputs/Results", "03-Outputs/Publication", "03-Outputs/Report"))
 }
 
 # File inclusion functions --------------------------------------
@@ -88,9 +90,10 @@ include_readmes <- function(proj_name) {
         data = list(ProjectName = proj_name)
     )
     use_template("results-README.md", "03-Outputs/Results/README.md")
-    use_template("data-README.md", "02-Process/Data/README.md")
+    use_template("data-README.md", "02-Process/Data-derived/README.md")
     use_template("data-raw-README.md", "02-Process/Data-raw/README.md")
     use_template("programs-README.md", "02-Process/Programs/README.md")
+    use_template("quality-README.md", "00-Administration/Quality/README.md")
 }
 
 include_word <- function(){
