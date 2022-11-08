@@ -63,10 +63,7 @@ f.ref <- function(x) {
 revtab <- data.frame("Section number changed" = c(NA, NA, NA), "Description and reason of change" = c(NA, NA, NA), "Date changed" = c(NA, NA, NA))
 colnames(revtab) <- c("Section number changed", "Description and reason of change", "Date changed")
 
-tabRevision <- revtab %>% gt() %>%
-    tab_options(container.width = 260, container.height = 120, table.font.size = 6, column_labels.font.size = 7) 
-
-gtsave(tabRevision, "RevisionTable.png")
+kable(revtab)
 
 ```
 
@@ -207,7 +204,8 @@ gtsave(tabRevision, "RevisionTable.png")
 - *any calculation or transformation used to derive the outcome (e.g., change from baseline, QoL score, time to event, logarithm, etc)*
 
 ## Analysis methods
-*List and describe each primary and secondary outcome including details of:*
+*List and describe each primary and secondary outcome including details of:*  
+
 - *what analysis method will be used and how the treatment effects will be presented*  
  
 - *Any adjustment for covariates (covariates to be used and how these will be included in the model)*  
@@ -229,9 +227,9 @@ gtsave(tabRevision, "RevisionTable.png")
 *Details of any additional statistical analyses required, e.g., complier-average causal effect analysis*
 
 ## Harms
-*Sufficient detail on summarizing safety data, e.g., information on severity, expectedness, and causality; details of how adverse events are coded or cate.g.orized; how adverse event data will be analyzed, i.e., grade 3/4 only, incidence case analysis, intervention emergent analysis.*
+*Sufficient detail on summarizing safety data, e.g., information on severity, expectedness, and causality; details of how adverse events are coded or categorized; how adverse event data will be analyzed, i.e., grade 3/4 only, incidence case analysis, intervention emergent analysis.*
 
-## Analysis dissemination strate.g.y
+## Analysis dissemination strategy
 *Outline the intended steps to be taken to disseminate the results of the study (i.e. will the results be published, presented at a conference etc.).*   
    
    

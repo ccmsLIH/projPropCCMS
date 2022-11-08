@@ -64,10 +64,7 @@ f.ref <- function(x) {
 revtab <- data.frame("Section number changed" = c(NA, NA, NA), "Description and reason of change" = c(NA, NA, NA), "Date changed" = c(NA, NA, NA))
 colnames(revtab) <- c("Section number changed", "Description and reason of change", "Date changed")
 
-tabRevision <- revtab %>% gt() %>%
-    tab_options(container.width = 260, container.height = 120, table.font.size = 6, column_labels.font.size = 7) 
-
-gtsave(tabRevision, "RevisionTable.png")
+kable(revtab)
 
 ```
 
