@@ -18,11 +18,11 @@ create_doc <- function(type = c("report", "slides")) {
     if (!is_rproj_folder())
         rlang::abort("The folder does not contain an `.Rproj` file. Please use this function while in the project created from `setup_project().`")
 
-    if (!dir.exists("03-Outputs/Results/"))
-        rlang::abort("What happened to your `03-Outputs/Results/` folder?")
+    if (!dir.exists("03-Outputs/Report/"))
+        rlang::abort("What happened to your `03-Outputs/Report/` folder?")
 
     type <- match.arg(type)
-    file_name <- normalizePath(file.path("03-Outputs/Results/", paste0(type, ".Rmd")), mustWork = FALSE)
+    file_name <- normalizePath(file.path("03-Outputs/Report/", paste0(type, ".Rmd")), mustWork = FALSE)
     template_file <- fs::path_package("prodigenrCCMS", "rmarkdown", "templates", type)
     if (file.exists(file_name)) {
         rlang::abort(paste0("The file '", type, ".Rmd' already exists in the Results folder."))
@@ -34,12 +34,12 @@ create_doc <- function(type = c("report", "slides")) {
             create_dir = FALSE,
             edit = FALSE
         )
-        cli::cli_alert_success("Creating a {.val {type}} file in the {.val {'03-Outputs/Results/'}} folder.")
+        cli::cli_alert_success("Creating a {.val {type}} file in the {.val {'03-Outputs/Report/'}} folder.")
     }
     invisible()
 }
 
-#' @describeIn create_report Creates a report R Markdown document in the `03-Outputs/Results/` folder.
+#' @describeIn create_report Creates a report R Markdown document in the `03-Outputs/Report/` folder.
 #' @export
 create_report <- function() {
     create_doc(type = "report")

@@ -12,7 +12,7 @@ library(prodigenrCCMS)
 
 
 # Creation of documents ---------------------------------------------------
-# Creation of a rmarkdown and word template for a statistical report in the "03-Outputs/Results/" folder
+# Creation of a rmarkdown and word template for a statistical report in the "03-Outputs/Report/" folder
 prodigenrCCMS::create_report()
 
 
