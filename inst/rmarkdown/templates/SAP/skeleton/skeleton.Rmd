@@ -3,9 +3,11 @@ title: "*TITLE: Descriptive title that matches the protocol, with SAP either as 
 subtitle: "Statistical Analysis Plan - SAP"
 author: " "
 date: "`r format(Sys.time(), '%d/%m/%Y')`"
+# bibliography: bib file in same folder as rmarkdown file
 output: 
   word_document:
     reference_docx: "SAPtemplate.docx"
+    toc: TRUE
 ---
 
 ```{r setup, include=FALSE}

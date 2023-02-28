@@ -3,6 +3,7 @@ title: "Project Name"
 subtitle: "Statistical Report"
 author: " "
 date: "`r format(Sys.time(), '%d/%m/%Y')`"
+# bibliography: bib file in same folder as rmarkdown file
 output: 
   word_document:
     reference_docx: "ReportTemplate.docx"
