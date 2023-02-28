@@ -38,6 +38,7 @@ f.ref <- function(x) {
   stringr::str_extract(fig_nums(x), "[^:]*")
 }
 ```
+
 \newpage
 
  \newline
