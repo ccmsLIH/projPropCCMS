@@ -74,13 +74,16 @@ kable(revtab)
 
 *Names, affiliations, and roles of SAP contributors*
 
-**Signatures**:
+**Signatures**:  
 
-*Person writing the SAP*:                       __________________________________
+-__________________________________   
+*Person writing the SAP*                   
 
-*Senior statistician responsible*:              __________________________________      
+-__________________________________  
+*Senior statistician responsible*
 
-*Chief investigator/ clinical lead*:            __________________________________                
+-__________________________________  
+*Chief investigator/ clinical lead*:                        
 
 
 
@@ -157,7 +160,7 @@ kable(revtab)
 
 # Statistical Principles
 
-## Confidence intervals and P values
+## Confidence intervals and P-values
 - *Level of statistical significance, including whether tests will be one- or two-sided*
 - *Description and rationale for any adjustment for multiplicity and, if so, detailing how the type 1 error is to be controlled. If no adjustment for multiplicity is planned then this should be stated for clarity.*
 - *Confidence intervals with their confidence levels to be reported*

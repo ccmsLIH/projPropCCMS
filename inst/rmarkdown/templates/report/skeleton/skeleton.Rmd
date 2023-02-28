@@ -76,11 +76,14 @@ kable(revtab)
 
 **Signatures**:
 
-*Person writing the Report*
+-__________________________________   
+*Person writing the SAP*                   
 
+-__________________________________  
 *Senior statistician responsible*
 
-*Chief investigator/ clinical lead*
+-__________________________________  
+*Chief investigator/ clinical lead*:   
 
 
 \newpage
