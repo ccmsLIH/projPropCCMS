@@ -43,65 +43,34 @@ setup_project <-
     }
 
 create_directories <- function() {
-    fs::dir_create(c("00-Administration", "01-Inputs", "02-Process", "03-Outputs"))
-
-    fs::dir_create(c("00-Administration/Budget", "00-Administration/Contract",
-                     "00-Administration/Meetings","00-Administration/Quality"))
-
-    fs::dir_create(c("01-Inputs/Bibliography", "01-Inputs/Methodology"))
-
-    fs::dir_create(c("01-Inputs/Methodology/Protocol", "01-Inputs/Methodology/Randomization",
-                     "01-Inputs/Methodology/SAP", "01-Inputs/Methodology/SampleSize"))
-
-    fs::dir_create(c("02-Process/Data-raw", "02-Process/Data-derived","02-Process/Programs",
-                     "02-Process/Datamanagement"))
-
-    fs::dir_create(c("02-Process/Datamanagement/01-DVPandTimelines",
-                     "02-Process/Datamanagement/02-CRFDesign",
-                     "02-Process/Datamanagement/03-DatabaseCreation",
-                     "02-Process/Datamanagement/04-SitesAndStaffManagement",
-                     "02-Process/Datamanagement/05-QueriesManagement",
-                     "02-Process/Datamanagement/06-ChangeManagement",
-                     "02-Process/Datamanagement/07-DataTransfers",
-                     "02-Process/Datamanagement/08-DataCoding",
-                     "02-Process/Datamanagement/09-Archives",
-                     "02-Process/Datamanagement/10-MeetingMinutes",
-                     "02-Process/Datamanagement/11-ExternalDataReconciliations"))
-
-
-
-    fs::dir_create(c("02-Process/Datamanagement/07-DataTransfers/ImportedFiles",
-                     "02-Process/Datamanagement/07-DataTransfers/ExportedFiles",
-                     "02-Process/Datamanagement/07-DataTransfers/TransformationPrograms"))
-
-    fs::dir_create(c("03-Outputs/Results", "03-Outputs/Publication", "03-Outputs/Report"))
+    fs::dir_create(c("Budget", "Documentation", "Proposal", "SampleSize", "Design"))
 }
 
 # File inclusion functions --------------------------------------
 
-add_description_file <- function(proj_name) {
-    use_template("basic-description", "DESCRIPTION",
-                 data = list(ProjectName = proj_name))
-}
+# add_description_file <- function(proj_name) {
+#     use_template("basic-description", "DESCRIPTION",
+#                  data = list(ProjectName = proj_name))
+# }
 
-include_readmes <- function(proj_name) {
-    use_template(
-        "base-README.md",
-        "README.md",
-        data = list(ProjectName = proj_name)
-    )
-    use_template("results-README.md", "03-Outputs/Results/README.md")
-    use_template("data-README.md", "02-Process/Data-derived/README.md")
-    use_template("data-raw-README.md", "02-Process/Data-raw/README.md")
-    use_template("programs-README.md", "02-Process/Programs/README.md")
-    use_template("quality-README.md", "00-Administration/Quality/README.md")
-    use_template("SAP-README.md", "01-Inputs/Methodology/SAP/README.md")
-    use_template("report-README.md", "03-Outputs/Report/README.md")
-}
+# include_readmes <- function(proj_name) {
+#     use_template(
+#         "base-README.md",
+#         "README.md",
+#         data = list(ProjectName = proj_name)
+#     )
+#     use_template("results-README.md", "03-Outputs/Results/README.md")
+#     use_template("data-README.md", "02-Process/Data-derived/README.md")
+#     use_template("data-raw-README.md", "02-Process/Data-raw/README.md")
+#     use_template("programs-README.md", "02-Process/Programs/README.md")
+#     use_template("quality-README.md", "00-Administration/Quality/README.md")
+#     use_template("SAP-README.md", "01-Inputs/Methodology/SAP/README.md")
+#     use_template("report-README.md", "03-Outputs/Report/README.md")
+# }
 
 include_word <- function(){
-    template_file <- fs::path_package("prodigenrCCMS", "datamanagement")
-    file_name <- normalizePath(file.path("02-Process/Datamanagement"), mustWork = FALSE)
+    template_file <- fs::path_package("projPropCCMS", "buget")
+    file_name <- normalizePath(file.path("Budget"), mustWork = FALSE)
     fs::dir_copy(template_file, file_name, overwrite = TRUE)
 }
 
@@ -122,24 +91,24 @@ include_word <- function(){
 #' @export
 #' @seealso [setup_project()] for starting the project.
 #'
-setup_with_git <- function() {
-    if (!requireNamespace("gert", quietly = TRUE)) {
-        rlang::abort(c("This function relies on the gert package, please install it and then run the function again.",
-                       "install.packages('gert')"))
-    }
-
-    if (!is_rproj_folder())
-        rlang::abort("The folder does not contain an `.Rproj` file. Please use this function while in the project created from `setup_project().`")
-
-    if (has_git()) {
-        rlang::abort("The project already has Git added.")
-    }
-
-    gert::git_init()
-    set_git_ignore_files()
-    cli::cli_alert_info("You'll need to restart RStudio to see the Git pane.")
-    return(invisible(NULL))
-}
+# setup_with_git <- function() {
+#     if (!requireNamespace("gert", quietly = TRUE)) {
+#         rlang::abort(c("This function relies on the gert package, please install it and then run the function again.",
+#                        "install.packages('gert')"))
+#     }
+# 
+#     if (!is_rproj_folder())
+#         rlang::abort("The folder does not contain an `.Rproj` file. Please use this function while in the project created from `setup_project().`")
+# 
+#     if (has_git()) {
+#         rlang::abort("The project already has Git added.")
+#     }
+# 
+#     gert::git_init()
+#     set_git_ignore_files()
+#     cli::cli_alert_info("You'll need to restart RStudio to see the Git pane.")
+#     return(invisible(NULL))
+# }
 
 # Utilities -----------------------------------------------------
 

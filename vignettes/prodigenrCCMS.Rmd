@@ -33,23 +33,23 @@ Starting a research project? Create a project directory like so:
 
 ```{r manuscript-proj}
 # install.packages(devtools) # only needs to be installed once
-# install_github("ccmsLIH/prodigenrCCMS") # only needs to be installed once
+# install_github("ccmsLIH/projPropCCMS") # only needs to be installed once
 
 library(devtools)
-library(prodigenrCCMS)
+library(projPropCCMS)
 
 
 prodigenrCCMS::setup_project("path/YourProjectName")
 ```
 
-Or via RStudio's interface (only for prodigenr, not prodigenrCCMS) (with RStudio version >1.1):
+Or via RStudio's interface (only for prodigenr, not projPropCCMS) (with RStudio version >1.1):
 
 ![Creating a prodigenr project in RStudio](../man/figures/rstudio-projects.gif)
 
 The resulting file structure should look something like this:
 
 ```{r folder-tree, echo=FALSE, comment="", results="markup"}
-prodigenrCCMS:::viz_project_tree(new_project_path)
+projPropCCMS:::viz_project_tree(new_project_path)
 ```
 
 
