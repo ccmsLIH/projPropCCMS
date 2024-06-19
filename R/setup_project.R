@@ -48,10 +48,10 @@ create_directories <- function() {
 
 # File inclusion functions --------------------------------------
 
-# add_description_file <- function(proj_name) {
-#     use_template("basic-description", "DESCRIPTION",
-#                  data = list(ProjectName = proj_name))
-# }
+add_description_file <- function(proj_name) {
+    use_template("basic-description", "DESCRIPTION",
+                 data = list(ProjectName = proj_name))
+}
 
 include_readmes <- function(proj_name) {
     use_template(
