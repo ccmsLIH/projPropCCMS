@@ -69,7 +69,7 @@ include_readmes <- function(proj_name) {
 }
 
 include_word <- function(){
-    template_file <- fs::path_package("projPropCCMS", "buget")
+    template_file <- fs::path_package("projPropCCMS", "budget")
     file_name <- normalizePath(file.path("Budget"), mustWork = FALSE)
     fs::dir_copy(template_file, file_name, overwrite = TRUE)
 }
