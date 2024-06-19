@@ -36,7 +36,7 @@ setup_project <-
                 add_description_file(proj_name)
                 create_directories()
                 include_readmes(proj_name)
-                add_Rfile(proj_name)
+                #add_Rfile(proj_name)
                 use_template("TODO.md")
                 include_word()
             })
