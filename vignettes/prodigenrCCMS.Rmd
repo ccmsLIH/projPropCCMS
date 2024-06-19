@@ -39,7 +39,7 @@ library(devtools)
 library(projPropCCMS)
 
 
-prodigenrCCMS::setup_project("path/YourProjectName")
+projPropCCMS::setup_project("path/YourProjectName")
 ```
 
 Or via RStudio's interface (only for prodigenr, not projPropCCMS) (with RStudio version >1.1):
