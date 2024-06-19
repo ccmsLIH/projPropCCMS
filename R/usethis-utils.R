@@ -68,8 +68,8 @@ add_rproj_file <- function(proj_name) {
 
 
 
-# # Taken from usethis:::uses_git
-# has_git <- function(project_path = ".") {
-#     repo <- tryCatch(gert::git_find(project_path), error = function(e) NULL)
-#     !is.null(repo)
-# }
+# Taken from usethis:::uses_git
+has_git <- function(project_path = ".") {
+    repo <- tryCatch(gert::git_find(project_path), error = function(e) NULL)
+    !is.null(repo)
+}

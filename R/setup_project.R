@@ -53,20 +53,20 @@ create_directories <- function() {
 #                  data = list(ProjectName = proj_name))
 # }
 
-# include_readmes <- function(proj_name) {
-#     use_template(
-#         "base-README.md",
-#         "README.md",
-#         data = list(ProjectName = proj_name)
-#     )
-#     use_template("results-README.md", "03-Outputs/Results/README.md")
-#     use_template("data-README.md", "02-Process/Data-derived/README.md")
-#     use_template("data-raw-README.md", "02-Process/Data-raw/README.md")
-#     use_template("programs-README.md", "02-Process/Programs/README.md")
-#     use_template("quality-README.md", "00-Administration/Quality/README.md")
-#     use_template("SAP-README.md", "01-Inputs/Methodology/SAP/README.md")
-#     use_template("report-README.md", "03-Outputs/Report/README.md")
-# }
+include_readmes <- function(proj_name) {
+    use_template(
+        "base-README.md",
+        "README.md",
+        data = list(ProjectName = proj_name)
+    )
+    # use_template("results-README.md", "03-Outputs/Results/README.md")
+    # use_template("data-README.md", "02-Process/Data-derived/README.md")
+    # use_template("data-raw-README.md", "02-Process/Data-raw/README.md")
+    # use_template("programs-README.md", "02-Process/Programs/README.md")
+    # use_template("quality-README.md", "00-Administration/Quality/README.md")
+    # use_template("SAP-README.md", "01-Inputs/Methodology/SAP/README.md")
+    # use_template("report-README.md", "03-Outputs/Report/README.md")
+}
 
 include_word <- function(){
     template_file <- fs::path_package("projPropCCMS", "buget")
@@ -91,24 +91,24 @@ include_word <- function(){
 #' @export
 #' @seealso [setup_project()] for starting the project.
 #'
-# setup_with_git <- function() {
-#     if (!requireNamespace("gert", quietly = TRUE)) {
-#         rlang::abort(c("This function relies on the gert package, please install it and then run the function again.",
-#                        "install.packages('gert')"))
-#     }
-# 
-#     if (!is_rproj_folder())
-#         rlang::abort("The folder does not contain an `.Rproj` file. Please use this function while in the project created from `setup_project().`")
-# 
-#     if (has_git()) {
-#         rlang::abort("The project already has Git added.")
-#     }
-# 
-#     gert::git_init()
-#     set_git_ignore_files()
-#     cli::cli_alert_info("You'll need to restart RStudio to see the Git pane.")
-#     return(invisible(NULL))
-# }
+setup_with_git <- function() {
+    if (!requireNamespace("gert", quietly = TRUE)) {
+        rlang::abort(c("This function relies on the gert package, please install it and then run the function again.",
+                       "install.packages('gert')"))
+    }
+
+    if (!is_rproj_folder())
+        rlang::abort("The folder does not contain an `.Rproj` file. Please use this function while in the project created from `setup_project().`")
+
+    if (has_git()) {
+        rlang::abort("The project already has Git added.")
+    }
+
+    gert::git_init()
+    set_git_ignore_files()
+    cli::cli_alert_info("You'll need to restart RStudio to see the Git pane.")
+    return(invisible(NULL))
+}
 
 # Utilities -----------------------------------------------------
 
